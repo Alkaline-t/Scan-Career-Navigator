@@ -1,0 +1,71 @@
+/* Base theme variables */
+:root {
+    /* typography */
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Dark theme (default) */
+:root[data-theme="dark"] {
+    --bg-color: #111827;
+    --surface-color: #1E293B;
+    --header-bg: rgba(17,24,39,0.92);
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --border-color: #374151;
+    --shadow-color: rgba(0,0,0,0.3);
+    --card-bg: #1E293B;
+    --hover-bg: #2D3748;
+    --accent-color: #38BDF8;
+    --accent-hover: #0EA5E9;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+    --bg-color: #ffffff;
+    --surface-color: #f8f9fa;
+    --header-bg: rgba(255,255,255,0.92);
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a5568;
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(0,0,0,0.1);
+    --card-bg: #ffffff;
+    --hover-bg: #f1f5f9;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+}
+
+/* Theme toggle button styles */
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#theme-toggle:hover {
+    color: var(--accent-color);
+    transform: rotate(20deg);
+    background-color: var(--hover-bg);
+}
+
+/* Apply theme transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure nav-content aligns items properly */
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

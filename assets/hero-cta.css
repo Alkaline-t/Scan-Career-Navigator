@@ -1,0 +1,67 @@
+/* Hero CTA triangular cluster */
+.hero-cta {
+    position: absolute;
+    right: 5.5rem;
+    top: 28%;
+    width: 220px;
+    height: 220px;
+    pointer-events: none; /* enable individual buttons */
+    display: grid;
+    place-items: center;
+}
+
+.cta-item { position: absolute; width: 140px; height: 80px; display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: auto; }
+
+.cta-btn {
+    --size: 64px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 14px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(14,165,233,0.14));
+    color: var(--accent-color);
+    box-shadow: 0 14px 30px rgba(2,6,23,0.14);
+    transition: transform 320ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, background 200ms ease;
+    pointer-events: auto;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+}
+
+/* positions to form a triangle */
+.cta-top { left: 50%; transform: translate(-50%, -130%); top: 0; }
+.cta-right { right: -6px; top: 50%; transform: translate(0, -50%); }
+.cta-bottom { left: 50%; bottom: 0; transform: translate(-50%, 130%); }
+
+/* subtle entrance animation */
+.hero-cta .cta-btn { transform-origin: center; opacity: 0; transform: scale(0.6) translateY(6px); }
+.hero-cta.revealed .cta-btn { opacity: 1; transform: scale(1) translateY(0); }
+.hero-cta .cta-btn:hover { transform: translateY(-8px) scale(1.08); box-shadow: 0 22px 46px rgba(2,6,23,0.28); background: linear-gradient(135deg, rgba(56,189,248,0.22), rgba(14,165,233,0.22)); }
+
+.cta-btn:focus { outline: none; box-shadow: 0 0 0 4px rgba(56,189,248,0.12), 0 22px 46px rgba(2,6,23,0.28); border-radius: 12px; }
+
+/* gentle floating motion for each item with staggered timing */
+@keyframes floatY {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+.cta-top { animation: floatY 4.2s ease-in-out infinite; }
+.cta-right { animation: floatY 4.6s ease-in-out 0.2s infinite; }
+.cta-bottom { animation: floatY 4.8s ease-in-out 0.4s infinite; }
+
+.cta-label { font-size: 0.86rem; color: var(--text-secondary); background: rgba(255,255,255,0.02); padding: 6px 12px; border-radius: 999px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); transform: translateY(6px); opacity: 0; transition: transform 280ms ease, opacity 220ms ease; }
+
+.cta-item:hover .cta-label, .cta-item:focus-within .cta-label, .hero-cta.revealed .cta-label { transform: translateY(0); opacity: 1; }
+
+.cta-item .ph { font-size: 1.25rem; color: var(--accent-color); }
+
+/* small labels for accessibility */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Hide on small screens */
+@media (max-width: 900px) {
+    .hero-cta { display: none; }
+}

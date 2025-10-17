@@ -1,0 +1,48 @@
+/* Modern theme variables and UI fixes */
+:root {
+    /* typography */
+    --font-family: 'Poppins', sans-serif;
+
+    /* default to dark mode colors */
+    --bg-color: #111827; /* dark background */
+    --surface-color: #1E293B; /* slightly lighter surface for depth */
+    --header-bg: rgba(17,24,39,0.92);
+    --text-primary: #F9FAFB; /* light text for dark mode */
+    --text-secondary: #D1D5DB; /* lighter secondary text */
+    --border-color: #374151;
+    --shadow-color: rgba(0,0,0,0.3);
+    --card-bg: #1E293B;
+    --hover-bg: #2D3748;
+    --btn-text: #111827;
+    --accent-color: #38BDF8;
+    --accent-hover: #0EA5E9;
+    --accent-rgb: 56,189,248; /* RGB values for accent color */
+    --gradient-primary: linear-gradient(90deg, #38bdf8, #0ea5e9);
+
+/* 🌗 Theme Toggle Button (Header Version) */
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle:hover {
+    color: var(--accent-color);
+    transform: rotate(20deg);
+}
+
+/* Align it nicely in header */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+}

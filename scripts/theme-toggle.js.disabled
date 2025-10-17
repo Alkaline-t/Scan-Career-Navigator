@@ -1,0 +1,5 @@
+/* theme-toggle.js has been intentionally disabled.
+
+   The site now enforces dark mode only. To restore the original light/dark toggle,
+   rename this file back to `theme-toggle.js` and re-add its <script> tag in index.html.
+*/

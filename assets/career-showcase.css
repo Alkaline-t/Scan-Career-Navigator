@@ -1,0 +1,171 @@
+/* Career Showcase Section Styles */
+.career-showcase-section {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, var(--surface-color), var(--bg-color));
+    position: relative;
+    overflow: hidden;
+}
+
+.career-showcase-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--accent-2);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.career-tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.career-tile-item {
+    position: relative;
+    height: 320px;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.career-tile-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tile-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.career-tile-item:hover .tile-content {
+    transform: translateY(-60px);
+}
+
+.tile-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-2);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tile-icon i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.career-tile-item:hover .tile-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.tile-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.tile-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.tile-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tile-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.tile-details i {
+    color: var(--accent-color);
+}
+
+.tile-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, var(--card-bg), transparent);
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.career-tile-item:hover .tile-hover {
+    transform: translateY(0);
+}
+
+.tile-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.tile-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Animation Classes */
+[data-aos="flip-left"] {
+    opacity: 0;
+    transform: rotateY(20deg) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-aos="flip-left"].aos-animate {
+    opacity: 1;
+    transform: rotateY(0) translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .career-showcase-section {
+        padding: 4rem 0;
+    }
+    
+    .career-tiles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .career-tile-item {
+        height: 300px;
+    }
+}

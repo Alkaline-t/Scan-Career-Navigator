@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Navigator - Expert Career Guidance & Professional Development</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Get expert career guidance, skills assessment, and professional development resources. Find your perfect career path with Career Navigator.">
+    <meta name="keywords" content="career guidance, professional development, career path, skill assessment, career test, resume builder">
+    <meta property="og:title" content="Career Navigator - Expert Career Guidance">
+    <meta property="og:description" content="Navigate your career journey with expert guidance, comprehensive assessments, and personalized recommendations.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Theme System -->
+    <link rel="stylesheet" href="assets/modern-theme.css">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/header-styles.css">
+    <link rel="stylesheet" href="assets/theme-toggle.css">
+    <link rel="stylesheet" href="assets/career-showcase.css">
+    <link rel="stylesheet" href="assets/hero-cta.css">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="scripts/animations.js" defer></script>
+    <script src="scripts/hero-animations.js" defer></script>
+    <script src="scripts/theme-toggle-new.js"></script>
+    <script src="scripts/hero-cta.js" defer></script>
+    <script src="scripts/three-dot-menu.js" defer></script>
+    <script src="scripts/scroll-reveal.js" defer></script>
+</head>
+<body class="font-sans antialiased">
+    <div class="app-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">
+                    <div class="brand-logo">
+                        <i class="ph ph-compass"></i>
+                        <span class="brand-text">Career Navigator</span>
+                    </div>
+                </a>
+                <div class="nav-content">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌞</button>
+                    </div>
+                    
+                    <div class="nav-tools">
+                        <button id="theme-toggle" aria-label="Toggle dark/light mode">🌞</button>
+                        
+                        <div class="three-dot-menu">
+                            <button class="three-dot-trigger" aria-label="Open menu">
+                                <i class="ph ph-dots-three-vertical"></i>
+                            </button>
+                            <div class="three-dot-content">
+                                <a href="resources/career-tests.html" class="three-dot-item">
+                                    <i class="ph ph-toolkit"></i>
+                                    <span>Resources</span>
+                                </a>
+                                <a href="resources/interview-tips.html" class="three-dot-item">
+                                    <i class="ph ph-notepad"></i>
+                                    <span>Interview Tips</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="mobile-trigger" aria-label="Toggle mobile menu">
+                        <i class="ph ph-list"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="#features" class="mobile-nav-item"><i class="ph ph-squares-four"></i><span>Features</span></a>
+
+                    <button class="mobile-nav-item mobile-dropdown-trigger"><div class="mobile-nav-header"><i class="ph ph-toolkit"></i><span>Resources</span></div><i class="ph ph-caret-down"></i></button>
+                    <div class="mobile-dropdown">
+                        <a href="resources/career-tests.html" class="mobile-dropdown-item">Career Assessment</a>
+                        <a href="resources/resume-builder.html" class="mobile-dropdown-item">Resume Builder</a>
+                        <a href="resources/interview-tips.html" class="mobile-dropdown-item">Interview Prep</a>
+                    </div>
+                </nav>
+                <div class="mobile-actions">
+                    <a href="resources/career-tests.html" class="btn btn-primary btn-block">Get Started <i class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-accent" aria-hidden="true"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <div class="badge-content">
+                            <i class="ph ph-star"></i>
+                            <span>#1 Career Guidance Platform</span>
+                            <i class="ph ph-star"></i>
+                        </div>
+                    </div>
+                    
+                    <h1 class="hero-title reveal">
+                        Discover & Navigate Your
+                        <span class="gradient-text">Perfect Career Path</span>
+                    </h1>
+
+                    <p class="hero-description reveal">
+                        Expert guidance to help you make informed career decisions. Get personalized recommendations, comprehensive assessments, and professional development resources all in one place.
+                    </p>
+                    
+                    <div class="hero-actions reveal">
+                        <button class="btn btn-outline btn-lg" data-modal="demo-video">
+                            <i class="ph ph-play-circle"></i>
+                            <span>How it works</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Triangular CTA group (Skill Assessment / Career Plans / Mentorship) -->
+                <div class="hero-cta" aria-hidden="false">
+                    <div class="cta-item cta-top">
+                        <button class="cta-btn" data-link="resources/career-tests.html" aria-label="Skill Assessment">
+                            <i class="ph ph-student"></i>
+                        </button>
+                        <div class="cta-label">Skill Assessment</div>
+                    </div>
+
+                    <div class="cta-item cta-right">
+                        <button class="cta-btn" data-link="careers/business.html" aria-label="Career Plans">
+                            <i class="ph ph-trending-up"></i>
+                        </button>
+                        <div class="cta-label">Career Plans</div>
+                    </div>
+
+                    <div class="cta-item cta-bottom">
+                        <button class="cta-btn" data-link="resources/interview-tips.html" aria-label="Mentorship">
+                            <i class="ph ph-handshake"></i>
+                        </button>
+                        <div class="cta-label">Mentorship</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+            <section class="features-section">
+
+            
+                
+                
+                <div class="hero-visual reveal">
+                    <div class="visual-container">
+                        <img 
+                            src="images/hero-illustration.webp" 
+                            alt="Career guidance and professional development" 
+                            class="hero-image"
+                            width="720"
+                            height="720"
+                            loading="eager"
+                        >
+                        
+                        <div class="floating-elements">
+                            <div class="float-card card-1" data-float="1">
+                                <div class="card-icon">
+                                    <i class="ph ph-student"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Skill Assessment</h4>
+                                    <p>Discover your strengths</p>
+                                </div>
+                            </div>
+                            
+                            <div class="float-card card-2" data-float="2">
+                                <div class="card-icon">
+                                    <i class="ph ph-trending-up"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Career Planning</h4>
+                                    <p>Map your future</p>
+                                </div>
+                            </div>
+                            
+                            <div class="float-card card-3" data-float="3">
+                                <div class="card-icon">
+                                    <i class="ph ph-handshake"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Mentorship</h4>
+                                    <p>Learn from experts</p>
+                                </div>
+                            </div>
+                            
+                            <div class="gradient-orb orb-1"></div>
+                            <div class="gradient-orb orb-2"></div>
+                            <div class="gradient-orb orb-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Everything you need for <span class="highlight-text">Career Success</span></h2>
+                    <p class="section-description">
+                        Comprehensive tools and resources to help you make informed career decisions
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ph ph-brain"></i>
+                        </div>
+                        <h3>Career Assessment</h3>
+                        <p>Take our comprehensive career aptitude test to discover careers that match your skills and interests.</p>
+                        <a href="resources/career-tests.html" class="feature-link">
+                            Learn more <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ph ph-file-text"></i>
+                        </div>
+                        <h3>Resume Builder</h3>
+                        <p>Create professional resumes with our easy-to-use builder. Stand out to potential employers.</p>
+                        <a href="resources/resume-builder.html" class="feature-link">
+                            Learn more <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ph ph-users"></i>
+                        </div>
+                        <h3>Interview Prep</h3>
+                        <p>Practice with common interview questions and get expert tips to ace your interviews.</p>
+                        <a href="resources/interview-tips.html" class="feature-link">
+                            Learn more <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ph ph-chart-line-up"></i>
+                        </div>
+                        <h3>Career Paths</h3>
+                        <p>Explore detailed career paths across various industries with salary insights and growth prospects.</p>
+                        <a href="#careers" class="feature-link">
+                            Learn more <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Paths Showcase Section -->
+        <section class="career-showcase-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">Explore <span class="highlight-text">Career Paths</span></h2>
+                    <p class="section-description reveal">
+                        Discover comprehensive guides for today's most promising career paths
+                    </p>
+                </div>
+                <div class="career-tiles-grid">
+                    <div class="career-tile-item" data-aos="flip-left">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-code"></i>
+                            </div>
+                            <h3>Software Development</h3>
+                            <p>Build the future with code</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-trend-up"></i>High Growth</li>
+                                <li><i class="ph ph-money"></i>Competitive Pay</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="careers/technology.html" class="tile-button">Explore Path</a>
+                        </div>
+                    </div>
+
+                    <div class="career-tile-item" data-aos="flip-left" data-aos-delay="100">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-brain"></i>
+                            </div>
+                            <h3>Data Science</h3>
+                            <p>Drive decisions with data</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-chart-line-up"></i>Growing Demand</li>
+                                <li><i class="ph ph-star"></i>High Impact</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="careers/technology.html#data-science" class="tile-button">Explore Path</a>
+                        </div>
+                    </div>
+
+                    <div class="career-tile-item" data-aos="flip-left" data-aos-delay="200">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-shield"></i>
+                            </div>
+                            <h3>Cybersecurity</h3>
+                            <p>Protect digital assets</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-lock"></i>Critical Role</li>
+                                <li><i class="ph ph-certificate"></i>Certification Path</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="careers/technology.html#cybersecurity" class="tile-button">Explore Path</a>
+                        </div>
+                    </div>
+
+                    <div class="career-tile-item" data-aos="flip-left" data-aos-delay="300">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-robot"></i>
+                            </div>
+                            <h3>AI Engineering</h3>
+                            <p>Shape intelligent systems</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-lightbulb"></i>Innovative Field</li>
+                                <li><i class="ph ph-graph"></i>Rapid Growth</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="careers/technology.html#ai-ml" class="tile-button">Explore Path</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="career-showcase-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">Career <span class="highlight-text">Resources</span></h2>
+                    <p class="section-description reveal">Tools and resources to help you succeed in your career journey</p>
+                </div>
+                <div class="career-tiles-grid">
+                    <div class="career-tile-item" data-aos="flip-left">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-file-text"></i>
+                            </div>
+                            <h3>Resume Builder</h3>
+                            <p>Stand out to employers</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-sparkle"></i>Professional Templates</li>
+                                <li><i class="ph ph-magic-wand"></i>Easy to Use</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="resources/resume-builder.html" class="tile-button">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="career-tile-item" data-aos="flip-left" data-aos-delay="100">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-brain"></i>
+                            </div>
+                            <h3>Career Tests</h3>
+                            <p>Find your perfect match</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-target"></i>Personalized Results</li>
+                                <li><i class="ph ph-chart-pie"></i>Detailed Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="resources/career-tests.html" class="tile-button">Take Test</a>
+                        </div>
+                    </div>
+
+                    <div class="career-tile-item" data-aos="flip-left" data-aos-delay="200">
+                        <div class="tile-content">
+                            <div class="tile-icon">
+                                <i class="ph ph-users"></i>
+                            </div>
+                            <h3>Interview Tips</h3>
+                            <p>Ace your interviews</p>
+                            <ul class="tile-details">
+                                <li><i class="ph ph-star"></i>Expert Guidance</li>
+                                <li><i class="ph ph-check-circle"></i>Practice Questions</li>
+                            </ul>
+                        </div>
+                        <div class="tile-hover">
+                            <a href="resources/interview-tips.html" class="tile-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                                                </main>
+                                           <footer>
+                                           <p>&copy; 2025 Career Navigator. All rights reserved.</p>
