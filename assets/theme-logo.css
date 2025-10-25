@@ -1,0 +1,37 @@
+/* Theme-aware logo styles */
+:root {
+  --logo-primary: #000000;
+}
+
+[data-theme="dark"] {
+  --logo-primary: #ffffff;
+}
+
+[data-theme="light"] {
+  --logo-primary: #000000;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-name {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
